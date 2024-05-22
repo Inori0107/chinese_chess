@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<style>
+			body {
+				height: 100vh;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-family: "標楷體";
+			}
+			.left-text {
+				width: 40px;
+				height: 800px;
+				/* background-color: red; */
+				margin: 0 15px 20px;
+				font-size: 40px;
+			}
+			.right-text {
+				width: 40px;
+				height: 800px;
+				/* background-color: red; */
+				margin: 0 15px 20px;
+				font-size: 40px;
+			}
+
+			.checkerboard {
+				width: 780px;
+				height: 780px;
+				border: 1px solid #333;
+				/* background-color: yellow; */
+				position: relative;
+				box-sizing: border-box;
+			}
+			/* .checkerboard::before {
+				content: "";
+				width: 85%;
+				height: 85%;
+				border: 1px solid #333;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				box-sizing: border-box;
+			} */
+			.checkerboard::after {
+				content: "楚河 漢界";
+				width: 85%;
+				height: 10%;
+				border: 1px solid #333;
+				border-top: 0px;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				font-size: 48px;
+				line-height: 1.5;
+				text-align: center;
+			}
+			.square-black {
+				width: 85%;
+				height: 37.5%;
+				background: linear-gradient(90deg, transparent 99%, black 1%) repeat-x left top/ 82.7px 292.5px;
+				position: absolute;
+				top: 7.5%;
+				left: 50%;
+				transform: translate(-50%, 0%);
+				border: 1px solid #333;
+				border-bottom: 0px;
+			}
+			.square-black::before {
+				content: "";
+				position: absolute;
+				background: linear-gradient(180deg, transparent 99%, black 1%) repeat-y left top/ 661px 72.9px;
+				width: 100%;
+				height: 100%;
+			}
+			.square-red {
+				width: 85%;
+				height: 37.5%;
+				background: linear-gradient(90deg, transparent 99%, black 1%) repeat-x left top/ 82.7px 292.5px;
+				position: absolute;
+				top: 55%;
+				left: 50%;
+				transform: translate(-50%, 0%);
+				border: 1px solid #333;
+				border-top: 0px;
+				border-bottom: 0px;
+			}
+			.square-red::before {
+				content: "";
+				position: absolute;
+				background: linear-gradient(180deg, transparent 99%, black 1%) repeat-y left top/ 661px 72.9px;
+				width: 100%;
+				height: 100%;
+			}
+
+			.chess {
+				width: 65px;
+				height: 65px;
+				border: 1px solid #333;
+				border-radius: 50%;
+				text-align: center;
+				line-height: 65px;
+				font-size: 40px;
+				background: #fff;
+			}
+			.row {
+				width: 95%;
+				height: 36%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				position: absolute;
+				top: 3.5%;
+				left: 50%;
+				transform: translate(-50%, 0%);
+			}
+			.col1 {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+			.col2 {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+			}
+			.site1 {
+				align-self: start;
+			}
+			.col3 {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="left-text">棋盤裡車無輪馬無韁叫聲將軍提防提防</div>
+		<div class="checkerboard">
+			<div class="square-black"></div>
+			<div class="row">
+				<div class="col1">
+					<div class="chess">車</div>
+					<div class="chess">馬</div>
+					<div class="chess">象</div>
+					<div class="chess">士</div>
+					<div class="chess">將</div>
+					<div class="chess">士</div>
+					<div class="chess">象</div>
+					<div class="chess">馬</div>
+					<div class="chess">車</div>
+				</div>
+				<div>&nbsp;</div>
+				<div class="col2">
+					<div class="chess site1">包</div>
+					<div class="chess site2">包</div>
+				</div>
+				<div class="col3">
+					<div class="chess">卒</div>
+					<div class="chess">卒</div>
+					<div class="chess">卒</div>
+					<div class="chess">卒</div>
+					<div class="chess">卒</div>
+				</div>
+				<!-- <div>&nbsp;</div> -->
+			</div>
+			<div class="square-red"></div>
+		</div>
+		<div class="right-text">圖畫裡龍不吟虎不嘯小小書僮可笑可笑</div>
+	</body>
+</html>
